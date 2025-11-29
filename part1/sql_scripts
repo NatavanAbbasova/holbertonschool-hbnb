@@ -1,0 +1,36 @@
+classDiagram
+
+class User {
+    id
+    first_name
+    last_name
+    email
+    password
+    is_admin
+}
+
+class Place {
+    id
+    title
+    description
+    price
+    latitude
+    longitude
+}
+
+class Review {
+    id
+    rating
+    comment
+}
+
+class Amenity {
+    id
+    name
+    description
+}
+
+User "1" --> "many" Place
+User "1" --> "many" Review
+Place "1" --> "many" Review
+Place "many" --> "many" Amenity

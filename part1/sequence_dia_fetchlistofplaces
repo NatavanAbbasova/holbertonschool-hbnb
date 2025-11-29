@@ -1,0 +1,7 @@
+sequenceDiagram
+User ->> API: request places
+API ->> Facade: getPlaces()
+Facade ->> PlaceRepo: fetch all
+PlaceRepo -->> Facade: list
+Facade -->> API: return list
+API -->> User: data

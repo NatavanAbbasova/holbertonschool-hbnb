@@ -1,0 +1,8 @@
+sequenceDiagram
+User ->> API: send registration data
+API ->> Facade: validate & request createUser
+Facade ->> User: create new user object
+User ->> UserRepo: save to DB
+UserRepo -->> Facade: success
+Facade -->> API: result
+API -->> User: response

@@ -1,0 +1,8 @@
+sequenceDiagram
+User ->> API: create place request
+API ->> Facade: createPlace(data)
+Facade ->> Place: build place object
+Place ->> PlaceRepo: insert into DB
+PlaceRepo -->> Facade: ok
+Facade -->> API: place created
+API -->> User: response

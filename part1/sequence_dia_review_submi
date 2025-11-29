@@ -1,0 +1,8 @@
+sequenceDiagram
+User ->> API: submit review
+API ->> Facade: addReview(data)
+Facade ->> Review: new review
+Review ->> ReviewRepo: save review
+ReviewRepo -->> Facade: stored
+Facade -->> API: done
+API -->> User: response

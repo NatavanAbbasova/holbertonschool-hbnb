@@ -1,0 +1,40 @@
+flowchart TB
+
+subgraph Presentation ["Presentation Layer"]
+    API["API"]
+    Service["Service"]
+end
+
+subgraph Business ["Business Logic Layer"]
+    Facade["Facade"]
+    User["User"]
+    Place["Place"]
+    Review["Review"]
+    Amenity["Amenity"]
+end
+
+subgraph Persistence ["Persistence Layer"]
+    RepoUser["UserRepo"]
+    RepoPlace["PlaceRepo"]
+    RepoReview["ReviewRepo"]
+    RepoAmenity["AmenityRepo"]
+    DB["Database"]
+end
+
+API --> Facade
+Service --> Facade
+
+Facade --> User
+Facade --> Place
+Facade --> Review
+Facade --> Amenity
+
+User --> RepoUser
+Place --> RepoPlace
+Review --> RepoReview
+Amenity --> RepoAmenity
+
+RepoUser --> DB
+RepoPlace --> DB
+RepoReview --> DB
+RepoAmenity --> DB
