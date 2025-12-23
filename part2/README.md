@@ -1,3 +1,16 @@
 This is part two of our hbnb project. Hope you find it useful and interesting :'D
 
-🔷 1. Layihə Strukturu ✔ Presentation layer (API) Flask-RESTx ilə HTTP endpoint-lər /users, /places, /reviews, /amenities ✔ Business logic layer User, Place, Review, Amenity modelləri Facade — API ilə repository arasında körpü Servislər (validation, computation və s.) ✔ Persistence layer In-memory repository Sonradan SQLAlchemy ilə əvəzlənəcək 🔷 2. app.py Bu fayl Flask tətbiqini işə salır və bütün namespaceləri API-yə əlavə edir. 🔷 3. Modeller id → UUID created_at updated_at 🔷 4. InMemoryRepository Bu texniki olaraq “fake database”-dir: add(obj) get(id) list_all() update() delete() Daha sonra SQLAlchemy gələndə dəyişdiriləcək. 🔷 5. Facade Bu layer API ilə Business Logic + Repository arasında körpüdür. Sən API-dən facade-ə müraciət edirsən. Facade isə repository-lər ilə işləyir. Bu, proyekti daha modul və test edilə bilən edir. 🔷 6. User API Burada: POST → user yarat GET → bütün user-ləri al GET /id → user-i al PUT /id → user-i yenilə
+🔷 1. Layihə Strukturu 
+Presentation layer (API) Flask-RESTx ilə HTTP endpoint-lər /users, /places, /reviews, /amenities 
+Business logic layer User, Place, Review, Amenity modelləri Facade — API ilə repository arasında körpü Servislər (validation, computation və s.) 
+Persistence layer In-memory repository Sonradan SQLAlchemy ilə əvəzlənəcək 
+🔷 2. app.py 
+Bu fayl Flask tətbiqini işə salır və bütün namespaceləri API-yə əlavə edir. 
+🔷 3. Modeller 
+id → UUID created_at updated_at 
+🔷 4. InMemoryRepository 
+Bu texniki olaraq “fake database”-dir: add(obj) get(id) list_all() update() delete() Daha sonra SQLAlchemy gələndə dəyişdiriləcək. 
+🔷 5. Facade 
+Bu layer API ilə Business Logic + Repository arasında körpüdür. Sən API-dən facade-ə müraciət edirsən. Facade isə repository-lər ilə işləyir. Bu, proyekti daha modul və test edilə bilən edir. 
+🔷 6. User API 
+Burada: POST → user yarat GET → bütün user-ləri al GET /id → user-i al PUT /id → user-i yenilə
