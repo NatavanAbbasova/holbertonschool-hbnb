@@ -1,0 +1,34 @@
+part2/
+│
+├── app.py
+│
+├── presentation/
+│   ├── __init__.py
+│   └── api/
+│       ├── __init__.py
+│       ├── users.py
+│       ├── amenities.py
+│       ├── places.py
+│       └── reviews.py
+│
+├── business/
+│   ├── __init__.py
+│   ├── facade.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── base_model.py
+│   │   ├── user.py
+│   │   ├── place.py
+│   │   ├── review.py
+│   │   └── amenity.py
+│   └── services/
+│       ├── __init__.py
+│       ├── user_service.py
+│       ├── place_service.py
+│       ├── review_service.py
+│       └── amenity_service.py
+│
+└── persistence/
+    ├── __init__.py
+    ├── repository.py
+    └── in_memory_repo.py
